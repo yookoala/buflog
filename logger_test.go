@@ -24,8 +24,8 @@ func TestLogger(t *testing.T) {
 	r := b.String()
 
 	// expected result
-	e := fmt.Sprintf("%s testing 1 2 3\n" +
-		"%s testing 4 5 6\n" +
+	e := fmt.Sprintf("%s testing 1 2 3\n"+
+		"%s testing 4 5 6\n"+
 		"%s testing 7 8 9\n",
 		ts, ts, ts)
 
