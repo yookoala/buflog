@@ -43,6 +43,22 @@ func TestNewLog1(t *testing.T) {
 	}
 }
 
+// testing log without parameters
+func TestNewPanic(t *testing.T) {
+	l := NewPanic("testing")
+	if l.f != PANIC {
+		t.Errorf("The log is not of PANIC type")
+	}
+}
+
+// testing log without parameters
+func TestNewFatal(t *testing.T) {
+	l := NewFatal("testing")
+	if l.f != FATAL {
+		t.Errorf("The log is not of FATAL type")
+	}
+}
+
 // test to play back a log entry
 func TestLogPlay(t *testing.T) {
 	b := &bytes.Buffer{}
